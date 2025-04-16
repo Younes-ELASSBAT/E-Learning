@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-import { FaHome, FaChalkboardTeacher, FaClipboardList, FaInfoCircle } from 'react-icons/fa';
+import { FaHome, FaChalkboardTeacher, FaClipboardList, FaInfoCircle,FaPaperPlane } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 export function Home() {
@@ -196,12 +196,12 @@ export function Home() {
 
         {/* Image section */}
         <div className="relative w-full lg:w-1/2 mt-12 lg:mt-0">
-        <DotLottieReact
-      src="https://lottie.host/c6391129-8c26-464e-9cd2-1415c8440ba2/xxXtJNfWII.lottie"
-      loop
-      autoplay
-      className="w-full max-w-[1000] mx-h-[800px]"
-       />
+          <DotLottieReact
+            src="https://lottie.host/c6391129-8c26-464e-9cd2-1415c8440ba2/xxXtJNfWII.lottie"
+            loop
+            autoplay
+            className="w-full max-w-[400px] h-[400px] mx-auto"
+          />
         </div>
       </section>
 
@@ -328,10 +328,7 @@ export function Home() {
             type="submit"
             className="px-8 py-3 bg-blue-50 text-gray-600 rounded-full hover:bg-blue-100 transition duration-300 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
           >
-            <span>Send</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-            </svg>
+             Send     <FaPaperPlane className="send-icon" />
           </button>
         </div>
       </form>

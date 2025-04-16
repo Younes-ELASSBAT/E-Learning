@@ -16,7 +16,6 @@ export function Login() {
       setName('');
       setPassword('');
       if(response.data.user.role=="user"){
-        console.log('hhhhhhh')
         navigate('/Student/Courses')
       }else{
         navigate('/')

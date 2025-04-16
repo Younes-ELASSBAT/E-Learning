@@ -5,6 +5,11 @@ import { Register } from './components/Auth/Register'
 import {Home} from './components/Home'
 import { Student } from './Layout/Students'
 import  Courses  from  './components/Student/Courses'
+import {Admin} from './Layout/Admin'
+import { Ajout } from './components/Admin/Category/Ajout'
+import { Affiche } from './components/Admin/Category/Affiche'
+import { Update } from './components/Admin/Category/Update'
+
 
 
 
@@ -38,6 +43,24 @@ export const Router=createBrowserRouter([
                 element:<Courses/>,
             },
            
+        ]
+    },
+    {
+        path:'/Admin',
+        element:<Admin/>,
+        children:[
+            {
+                path:'Categoryajout',
+                element:<Ajout/>,
+            },
+            {
+                path:'Categoryindex',
+                element:<Affiche/>,
+            },
+            {
+                path:'CategoryUpdate/:id',
+                element:<Update/>,
+            },
         ]
     },
    
