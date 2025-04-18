@@ -9,6 +9,10 @@ import {Admin} from './Layout/Admin'
 import { Ajout } from './components/Admin/Category/Ajout'
 import { Affiche } from './components/Admin/Category/Affiche'
 import { Update } from './components/Admin/Category/Update'
+import { Index } from './components/Admin/Courses/Index'
+import { Create } from './components/Admin/Courses/Create'
+import { Modifier } from './components/Admin/Courses/Modifier'
+import { Dashboard } from './components/Admin/Dashboard'
 
 
 
@@ -50,6 +54,10 @@ export const Router=createBrowserRouter([
         element:<Admin/>,
         children:[
             {
+                path:'',
+                element:<Dashboard/>,
+            },
+            {
                 path:'Categoryajout',
                 element:<Ajout/>,
             },
@@ -60,6 +68,18 @@ export const Router=createBrowserRouter([
             {
                 path:'CategoryUpdate/:id',
                 element:<Update/>,
+            },
+            {
+                path:'CoursesIndex',
+                element:<Index/>,
+            },
+            {
+                path:'CoursesCreate',
+                element:<Create/>,
+            },
+            {
+                path:'CoursesUpdate/:id',
+                element:<Modifier/>,
             },
         ]
     },
